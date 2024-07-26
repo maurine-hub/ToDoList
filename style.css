@@ -1,0 +1,124 @@
+*, ::after, ::before{
+    border: none;
+}
+
+body{
+    margin: 0;
+}
+
+.contains{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+/* ---------------style sur le form--------------------- */
+form{
+    display: flex;
+    border: 1px solid #a1a1a1;
+}
+
+.todo-input{
+    background-color: #f6f6f6;
+    outline: none;
+    border: none;
+    width: 400px;
+    padding: 8px ;
+}
+
+.todo-btn{
+    background-color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+    color: #fff;
+    padding: 8px ;
+}
+
+
+/* ----------------style sur la todoDiv------------ */
+.todo-container{
+    display: flex;
+    justify-content: center;
+ 
+}
+.todo-list{
+   padding: 0;
+    list-style-type: none;
+    
+}
+.todo-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    width: 480px;
+    border: 1px solid #333; 
+    transform: all 3s ease;
+}
+
+.todo-div:not(:first-child){
+    border-top: none;
+}
+
+.todoLi{
+    flex: 1;
+    margin-left: 20px;
+}
+/* ----------------fin----------- */
+
+/* ----------style sur les boutons---------------- */
+.trash-btn{
+    background-color: #da0e0e;
+    color: white;
+    padding: 4px 6px;
+    border-radius: 10%;
+    cursor: pointer;
+
+}
+
+.fa-trash-can{
+    pointer-events: none;
+    
+}
+
+.check-btn{
+    opacity: 0.1;
+    text-decoration: line-through;
+    transition: all 1s ease;
+}
+
+/* style sur les filtres */
+.filters{
+    display: flex;
+    justify-content: start;
+    border: 1px solide black;
+    margin: 10px 0px;
+    width: 40%;
+}
+
+.ul-filter{
+    display: flex;
+    list-style-type: none;
+    /* justify-content: space-between; */
+    /* width: 45%; */
+    padding:0;
+    border: 1px solid #000;
+    /* align-items: center; */
+}
+.ul-filter li{
+    border-right:1px solid #000;
+    padding: 8px;
+    text-transform: capitalize;
+    cursor: pointer;
+ 
+
+}
+.ul-filter li:active {
+    background-color: #000;
+    color: #fff;
+}
+.ul-filter li:last-child{
+    border-right: none;
+}
