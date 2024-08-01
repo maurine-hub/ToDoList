@@ -24,6 +24,7 @@ form{
 .todo-input{
     background-color: #f6f6f6;
     outline: none;
+    /* outline-color: black; */
     border: none;
     width: 400px;
     padding: 8px ;
@@ -47,6 +48,7 @@ form{
 .todo-list{
    padding: 0;
     list-style-type: none;
+    margin: 0;
     
 }
 .todo-div{
@@ -97,7 +99,7 @@ form{
     display: flex;
     justify-content: start;
     border: 1px solide black;
-    margin: 10px 0px;
+    margin: 12px 0px;
     width: 40%;
 }
 

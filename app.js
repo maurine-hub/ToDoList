@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", getTodos(todos, style1));
 
 //les fonctions
 
+// setTimeout(() => {
+//   location.reload();
+// }, 5000);
 
 function addItems(e) {
   e.preventDefault();
@@ -57,6 +60,7 @@ function addItems(e) {
   trash.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
   trash.classList.add("trash-btn");
   todoDiv.appendChild(trash);
+  trash.onclick = () => removeLocalTodo(tache) 
 
   //ajout du li dans le local storage
 
@@ -74,13 +78,15 @@ function addItems(e) {
 function deleteCheck(e) {
   const item = e.target;
 
+
   if (item.classList[0] === "trash-btn") {
     const todo = item.parentNode;
     todo.classList.add("fail");
-    todo.addEventListener("transitionend", function () {
-        todo.remove(); 
-    });
-    // removeLocalTodo(todo.children[1].innerText);
+    // todo.addEventListener("transitionend", function () {
+    // });
+    todo.remove(); 
+   
+    // removeLocalTodo();
   }
 
   if (item.classList[0] === "checkbox") {
@@ -157,12 +163,6 @@ function saveLocalStorage(todo) {
 
 function getTodos(todos , style) {
 
-//   if (localStorage.getItem("todos") === null) {
-//     todos = [];
-//   } else {
-//     todos = JSON.parse(localStorage.getItem("todos"));
-//   }
-
   todos.map((todo) => {
     //création de la div
     const todoDiv = document.createElement("div");
@@ -188,16 +188,7 @@ function getTodos(todos , style) {
     trash.classList.add("trash-btn");
     todoDiv.appendChild(trash);
 
-    // trash.onclick = function() {
-    //     console.log("c'est le todo", todo.id)
-  
-    //     const newTodo = todos.filter(item => item.id !== todo.id);
-    //     console.log('newTodo' , newTodo);
-    //     localStorage.setItem("todos", JSON.stringify(newTodo));
-    //     todoList.addEventListener("click", deleteCheck);
-    // }
-    //   const todoIndex = todo.children[1].innerText;
-    //   todos.splice(todos.indexOf(todoIndex), 1);
+    trash.onclick = () => removeLocalTodo(todo);
 
     //pour sauvegarder les status des tâches
 
@@ -208,9 +199,12 @@ function getTodos(todos , style) {
   });
 }
 
-function removeLocalTodo(id) {
-  
-    
+function removeLocalTodo(todo) {
+    console.log("c'est le todo", todo.id)
+    const newTodo = todos.filter(item => item.id !== todo.id)
+    console.log('newTodo' , newTodo);
+    localStorage.setItem("todos", JSON.stringify(newTodo));
+         
 }
 
 
