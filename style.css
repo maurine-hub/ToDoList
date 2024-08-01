@@ -75,16 +75,19 @@ form{
     padding: 4px 6px;
     border-radius: 10%;
     cursor: pointer;
-
 }
 
+.fail{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
 .fa-trash-can{
     pointer-events: none;
     
 }
 
-.check-btn{
-    opacity: 0.1;
+.done{
+    opacity: 0.5;
     text-decoration: line-through;
     transition: all 1s ease;
 }
@@ -112,10 +115,9 @@ form{
     padding: 8px;
     text-transform: capitalize;
     cursor: pointer;
- 
 
 }
-.ul-filter li:active {
+.style {
     background-color: #000;
     color: #fff;
 }
