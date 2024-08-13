@@ -94,7 +94,7 @@ form{
     transition: all 1s ease;
 }
 
-/* style sur les filtres */
+/*style sur les filtres */
 .filters{
     display: flex;
     justify-content: start;

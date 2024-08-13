@@ -3,11 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todoList avec l'ES6 </title>
-</head>
+    <link rel="stylesheet" href="style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></head>
 <body>
     
     <div class="container">
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Ajouter une nouvelle tâche...">
+            <input type="button" value="Ajouter" id="add-todo">
+        </form>
+    
+        <div class="options-filters">
+            <button class="btn1" data-filter="all">Toutes</button>
+            <button class="btn2" data-filter="completed">Faites</button>
+            <button class="btn3" data-filter="pending">À faire</button>
+        </div>
+    
+        <div class="todo-contains">
+            <ul class="todoList">
+                <!-- Les éléments de la todoList seront ajoutés ici -->
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="container">
         <form action="">
             <input type="button" value="">
         </form>
@@ -17,12 +35,14 @@
             <button>faites</button>
             <button>à faire</button>
         </div>
-        
+
         <div class="todo-contains">
             <ul class="todoList">
 
             </ul>
         </div>
-    </div>
+    </div> -->
+
+    <script src="app2.js" defer ></script>
 </body>
 </html>
